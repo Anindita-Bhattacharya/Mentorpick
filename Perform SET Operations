@@ -1,0 +1,22 @@
+t=int(input())
+while(t>0):
+    op=int(input())
+    set1=set()
+    while(op>0):
+        operations=list(map(int,input().split()))
+        if(operations[0]==0):
+            set1.add(operations[1])
+        elif(operations[0]==1):
+            if(operations[1] in set1):
+                print("true",end=" ")
+            else:
+                print("false",end=" ")
+        else:
+            if(operations[1] in set1):
+                set1.remove(operations[1])
+        op=op-1 
+    print()
+    t=t-1
+            
+            
+    
